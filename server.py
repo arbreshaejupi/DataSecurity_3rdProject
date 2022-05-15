@@ -31,6 +31,10 @@ serverSocket.bind(('127.0.0.1', serverPort))
 serverSocket.listen(5)      
 print("Socket is listening")
 client, addr = serverSocket.accept() 
+
+
+
+
 while True:
 	     
 	print('Received connection from: ', addr)
@@ -49,4 +53,6 @@ while True:
 	encoded_text = cipher_suite.encrypt(message.encode('utf-8'))
 	client.send(encoded_text)
 
+	
+	
 	
